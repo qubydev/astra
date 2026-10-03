@@ -265,55 +265,77 @@ type LanguageItem = {
   flag: string
 }
 
-const LANGUAGES_COL_1: LanguageItem[] = [
-  { code: 'us', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-  { code: 'pt', name: 'Português', flag: '🇵🇹' },
-  { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-  { code: 'se', name: 'Svenska', flag: '🇸🇪' },
-  { code: 'pl', name: 'Polski', flag: '🇵🇱' },
-  { code: 'dk', name: 'Dansk', flag: '🇩🇰' },
-  { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
-  { code: 'no', name: 'Norsk', flag: '🇳🇴' },
-  { code: 'ie', name: 'Gaeilge', flag: '🇮🇪' },
-  { code: 'br', name: 'Português (BR)', flag: '🇧🇷' },
-]
-
-const LANGUAGES_COL_2: LanguageItem[] = [
-  { code: 'jp', name: '日本語', flag: '🇯🇵' },
-  { code: 'kr', name: '한국어', flag: '🇰🇷' },
-  { code: 'cn', name: '中文', flag: '🇨🇳' },
-  { code: 'sa', name: 'العربية', flag: '🇸🇦' },
-  { code: 'in', name: 'हिन्दी', flag: '🇮🇳' },
-  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-  { code: 'vn', name: 'Tiếng Việt', flag: '🇻🇳' },
-  { code: 'th', name: 'ไทย', flag: '🇹🇭' },
-  { code: 'id', name: 'Bahasa', flag: '🇮🇩' },
-  { code: 'my', name: 'Melayu', flag: '🇲🇾' },
-  { code: 'il', name: 'עברית', flag: '🇮🇱' },
-  { code: 'ph', name: 'Filipino', flag: '🇵🇭' },
-  { code: 'bd', name: 'বাংলা', flag: '🇧🇩' },
-  { code: 'pk', name: 'اردو', flag: '🇵🇰' },
-]
-
-const LANGUAGES_COL_3: LanguageItem[] = [
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-  { code: 'gr', name: 'Ελληνικά', flag: '🇬🇷' },
-  { code: 'cz', name: 'Čeština', flag: '🇨🇿' },
-  { code: 'ua', name: 'Українська', flag: '🇺🇦' },
-  { code: 'ro', name: 'Română', flag: '🇷🇴' },
-  { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
-  { code: 'bg', name: 'Български', flag: '🇧🇬' },
-  { code: 'hr', name: 'Hrvatski', flag: '🇭🇷' },
-  { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
-  { code: 'rs', name: 'Srpski', flag: '🇷🇸' },
-  { code: 'lt', name: 'Lietuvių', flag: '🇱🇹' },
-  { code: 'lv', name: 'Latviešu', flag: '🇱🇻' },
-  { code: 'ee', name: 'Eesti', flag: '🇪🇪' },
-  { code: 'is', name: 'Íslenska', flag: '🇮🇸' },
+const LANGUAGE_ROWS: [LanguageItem, LanguageItem, LanguageItem][] = [
+  [
+    { code: 'us', name: 'English', flag: '🇺🇸' },
+    { code: 'jp', name: '日本語', flag: '🇯🇵' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  ],
+  [
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'kr', name: '한국어', flag: '🇰🇷' },
+    { code: 'gr', name: 'Ελληνικά', flag: '🇬🇷' },
+  ],
+  [
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'cn', name: '中文', flag: '🇨🇳' },
+    { code: 'cz', name: 'Čeština', flag: '🇨🇿' },
+  ],
+  [
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'sa', name: 'العربية', flag: '🇸🇦' },
+    { code: 'ua', name: 'Українська', flag: '🇺🇦' },
+  ],
+  [
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'in', name: 'हिन्दी', flag: '🇮🇳' },
+    { code: 'ro', name: 'Română', flag: '🇷🇴' },
+  ],
+  [
+    { code: 'pt', name: 'Português', flag: '🇵🇹' },
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+    { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
+  ],
+  [
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+    { code: 'vn', name: 'Tiếng Việt', flag: '🇻🇳' },
+    { code: 'bg', name: 'Български', flag: '🇧🇬' },
+  ],
+  [
+    { code: 'se', name: 'Svenska', flag: '🇸🇪' },
+    { code: 'th', name: 'ไทย', flag: '🇹🇭' },
+    { code: 'hr', name: 'Hrvatski', flag: '🇭🇷' },
+  ],
+  [
+    { code: 'pl', name: 'Polski', flag: '🇵🇱' },
+    { code: 'id', name: 'Bahasa', flag: '🇮🇩' },
+    { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
+  ],
+  [
+    { code: 'dk', name: 'Dansk', flag: '🇩🇰' },
+    { code: 'my', name: 'Melayu', flag: '🇲🇾' },
+    { code: 'rs', name: 'Srpski', flag: '🇷🇸' },
+  ],
+  [
+    { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
+    { code: 'il', name: 'עברית', flag: '🇮🇱' },
+    { code: 'lt', name: 'Lietuvių', flag: '🇱🇹' },
+  ],
+  [
+    { code: 'no', name: 'Norsk', flag: '🇳🇴' },
+    { code: 'ph', name: 'Filipino', flag: '🇵🇭' },
+    { code: 'lv', name: 'Latviešu', flag: '🇱🇻' },
+  ],
+  [
+    { code: 'ie', name: 'Gaeilge', flag: '🇮🇪' },
+    { code: 'bd', name: 'বাংলা', flag: '🇧🇩' },
+    { code: 'ee', name: 'Eesti', flag: '🇪🇪' },
+  ],
+  [
+    { code: 'br', name: 'Português (BR)', flag: '🇧🇷' },
+    { code: 'pk', name: 'اردو', flag: '🇵🇰' },
+    { code: 'is', name: 'Íslenska', flag: '🇮🇸' },
+  ],
 ]
 
 function FlagImage({ code, fallback }: { code: string; fallback: string }) {
@@ -328,45 +350,15 @@ function FlagImage({ code, fallback }: { code: string; fallback: string }) {
       src={`https://flagcdn.com/w40/${code}.png`}
       alt=''
       onError={() => setHasError(true)}
-      className='w-4.5 h-3 object-cover rounded-xs border border-border/40 shadow-2xs shrink-0 select-none'
+      className='w-4 h-2.5 object-cover rounded-none shrink-0 select-none'
       loading='lazy'
     />
   )
 }
 
-function LanguagesMarqueeColumn({
-  items,
-  duration,
-}: {
-  items: LanguageItem[]
-  duration: number
-}) {
-  return (
-    <motion.div
-      animate={{ y: ['0%', '-50%'] }}
-      transition={{
-        duration,
-        ease: 'linear',
-        repeat: Infinity,
-      }}
-      className='flex flex-col'
-    >
-      {[...items, ...items].map((lang, idx) => (
-        <div
-          key={idx}
-          className='mb-1.5 flex items-center gap-1.5 px-2 py-1 rounded-md border border-border/60 bg-muted/50 backdrop-blur-xs whitespace-nowrap shadow-2xs'
-        >
-          <FlagImage code={lang.code} fallback={lang.flag} />
-          <span className='text-[11px] sm:text-xs font-medium text-foreground tracking-tight'>
-            {lang.name}
-          </span>
-        </div>
-      ))}
-    </motion.div>
-  )
-}
-
 function InfiniteLanguagesGrid() {
+  const allRows = [...LANGUAGE_ROWS, ...LANGUAGE_ROWS]
+
   return (
     <div
       className='absolute inset-0 w-full h-full overflow-hidden select-none'
@@ -378,11 +370,31 @@ function InfiniteLanguagesGrid() {
       }}
     >
       <div className='absolute inset-x-0 -top-16 flex justify-center pointer-events-none'>
-        <div className='flex gap-2 sm:gap-2.5 rotate-[-6deg] scale-110 sm:scale-115'>
-          <LanguagesMarqueeColumn items={LANGUAGES_COL_1} duration={28} />
-          <LanguagesMarqueeColumn items={LANGUAGES_COL_2} duration={22} />
-          <LanguagesMarqueeColumn items={LANGUAGES_COL_3} duration={30} />
-        </div>
+        <motion.div
+          animate={{ y: ['0%', '-50%'] }}
+          transition={{
+            duration: 24,
+            ease: 'linear',
+            repeat: Infinity,
+          }}
+          className='flex flex-col rotate-[-6deg] scale-110 sm:scale-115 border-t border-l border-border/30'
+        >
+          {allRows.map((row, rowIdx) => (
+            <div key={rowIdx} className='flex'>
+              {row.map((lang, colIdx) => (
+                <div
+                  key={colIdx}
+                  className='w-28 sm:w-32 h-8 px-2 flex items-center justify-center gap-2 border-b border-r border-border/30 bg-transparent rounded-none whitespace-nowrap shadow-[inset_0_1px_3px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.05)]'
+                >
+                  <FlagImage code={lang.code} fallback={lang.flag} />
+                  <span className='text-xs font-medium text-foreground tracking-tight'>
+                    {lang.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   )
