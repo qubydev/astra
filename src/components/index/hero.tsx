@@ -591,7 +591,7 @@ export default function Hero() {
   const [activeTab, setActiveTab] = useState<'tts' | 'clone'>('tts')
 
   return (
-    <div className='flex flex-col items-center justify-center pt-8 sm:pt-14 md:pt-18 pb-6 sm:pb-10'>
+    <div className='flex flex-col items-center justify-center pt-8 sm:pt-14 md:pt-18 pb-12 sm:pb-16 md:pb-20'>
       <h1 className='text-balance px-4 text-center font-crimson-pro text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.15] sm:leading-[1.1] tracking-tight max-w-3xl'>
         The best All-in-one content creation platform.
       </h1>
@@ -606,51 +606,8 @@ export default function Hero() {
         </Button>
       </div>
 
-      {/* Demo Section with Tab Switcher */}
-      <div className='mt-8 sm:mt-12 w-full flex flex-col items-center'>
-        {/* Tab Pills */}
-        <div className='inline-flex items-center p-1 rounded-full border border-border bg-muted/40 backdrop-blur-xs mb-6 sm:mb-8'>
-          <button
-            type='button'
-            onClick={() => setActiveTab('tts')}
-            className={cn(
-              'relative px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors cursor-pointer outline-none',
-              activeTab === 'tts' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
-            )}
-          >
-            {activeTab === 'tts' && (
-              <motion.div
-                layoutId='activeDemoTab'
-                className='absolute inset-0 rounded-full bg-background shadow-xs border border-border/80'
-                transition={{ type: 'spring', bounce: 0.15, duration: 0.35 }}
-              />
-            )}
-            <span className='relative z-10'>
-              Text to Speech
-            </span>
-          </button>
-
-          <button
-            type='button'
-            onClick={() => setActiveTab('clone')}
-            className={cn(
-              'relative px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors cursor-pointer outline-none',
-              activeTab === 'clone' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
-            )}
-          >
-            {activeTab === 'clone' && (
-              <motion.div
-                layoutId='activeDemoTab'
-                className='absolute inset-0 rounded-full bg-background shadow-xs border border-border/80'
-                transition={{ type: 'spring', bounce: 0.15, duration: 0.35 }}
-              />
-            )}
-            <span className='relative z-10'>
-              Voice Clone
-            </span>
-          </button>
-        </div>
-
+      {/* Demo Section */}
+      <div className='mt-8 sm:mt-10 w-full flex flex-col items-center'>
         {/* Tab Content */}
         <div className='w-full'>
           <AnimatePresence mode='wait'>
@@ -678,6 +635,55 @@ export default function Hero() {
               </motion.div>
             )}
           </AnimatePresence>
+        </div>
+
+        {/* Demo Mode Switcher - Centered below the demo, well-proportioned */}
+        <div className='mt-6 sm:mt-8 flex items-center justify-center'>
+          <div className='inline-flex items-center p-1 rounded-full border border-border bg-muted/40 backdrop-blur-xs'>
+            <button
+              type='button'
+              onClick={() => setActiveTab('tts')}
+              className={cn(
+                'relative h-8 sm:h-8.5 px-4 text-xs sm:text-sm font-medium rounded-full transition-colors cursor-pointer outline-none flex items-center justify-center',
+                activeTab === 'tts'
+                  ? 'text-foreground'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+            >
+              {activeTab === 'tts' && (
+                <motion.div
+                  layoutId='activeDemoTab'
+                  className='absolute inset-0 rounded-full bg-background shadow-xs border border-border/80'
+                  transition={{ type: 'spring', bounce: 0.15, duration: 0.35 }}
+                />
+              )}
+              <span className='relative z-10'>
+                Text to Speech
+              </span>
+            </button>
+
+            <button
+              type='button'
+              onClick={() => setActiveTab('clone')}
+              className={cn(
+                'relative h-8 sm:h-8.5 px-4 text-xs sm:text-sm font-medium rounded-full transition-colors cursor-pointer outline-none flex items-center justify-center',
+                activeTab === 'clone'
+                  ? 'text-foreground'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+            >
+              {activeTab === 'clone' && (
+                <motion.div
+                  layoutId='activeDemoTab'
+                  className='absolute inset-0 rounded-full bg-background shadow-xs border border-border/80'
+                  transition={{ type: 'spring', bounce: 0.15, duration: 0.35 }}
+                />
+              )}
+              <span className='relative z-10'>
+                Voice Clone
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
