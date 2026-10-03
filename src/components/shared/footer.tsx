@@ -186,10 +186,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom-Most Section: ONLY the giant Logo & ASTRA, fading directly on the glyphs themselves (no smoky overlay) */}
-      <div className='w-full overflow-hidden select-none pointer-events-none flex items-center justify-center gap-4 sm:gap-7 md:gap-10 pt-4 pb-0 -mb-2 sm:-mb-6 md:-mb-8'>
+      <div className='w-full overflow-hidden select-none pointer-events-none flex items-center justify-center gap-2 sm:gap-6 md:gap-10 pt-4 pb-0 -mb-3 sm:-mb-6 md:-mb-8'>
         <svg
           viewBox='0 0 512 512'
-          className='size-[13vw] sm:size-[15vw] text-foreground shrink-0 self-center'
+          className='size-[16vw] sm:size-[14vw] md:size-[15vw] text-foreground shrink-0 self-center'
         >
           <defs>
             <linearGradient id='footer-logo-gradient' x1='0' y1='0' x2='0' y2='1'>
@@ -205,7 +205,7 @@ export default function Footer() {
           />
         </svg>
 
-        <h1 className='text-[18vw] sm:text-[21vw] font-black tracking-tighter leading-[0.72] uppercase bg-gradient-to-b from-foreground from-28% via-foreground/45 via-65% to-transparent bg-clip-text text-transparent'>
+        <h1 className='text-[24vw] sm:text-[20vw] md:text-[21vw] font-black tracking-tighter leading-[0.72] uppercase whitespace-nowrap bg-gradient-to-b from-foreground from-28% via-foreground/45 via-65% to-transparent bg-clip-text text-transparent'>
           ASTRA
         </h1>
       </div>
