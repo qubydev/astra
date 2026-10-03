@@ -521,12 +521,15 @@ function AnimatedTestimonials() {
 
 export default function Stats() {
   return (
-    <section className='w-full max-w-6xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 md:pt-28 pb-16 sm:pb-24'>
+    <section id='features' className='w-full max-w-6xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 md:pt-28 pb-16 sm:pb-24'>
       {/* Section Header */}
-      <div className='text-center max-w-xl mx-auto mb-8 sm:mb-10'>
-        <h2 className='text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-foreground'>
+      <div className='text-center max-w-2xl mx-auto mb-12 sm:mb-16'>
+        <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground'>
           Built for modern creators
         </h2>
+        <p className='mt-3.5 sm:mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed'>
+          Everything you need to produce broadcast-quality AI voices and localized content.
+        </p>
       </div>
 
       {/* Bento Grid */}

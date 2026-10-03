@@ -47,9 +47,9 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className='hidden md:flex items-center justify-center gap-8 text-sm font-medium [&>a]:text-muted-foreground [&>a]:hover:text-foreground [&>a]:transition-colors'>
-          <Link href="#">How it works</Link>
-          <Link href="#">All tools</Link>
-          <Link href="#">Pricing</Link>
+          <Link href="#features">Features</Link>
+          <Link href="#pricing">Pricing</Link>
+          <Link href="#faq">FAQ</Link>
         </div>
 
         {/* Desktop Action Buttons */}
@@ -57,9 +57,11 @@ export default function Navbar() {
           <Button className="h-10 rounded-full px-3.5 text-sm font-medium" variant="ghost">
             Log in
           </Button>
-          <Button className="h-10 rounded-full px-4 text-sm font-medium">
-            Get started
-          </Button>
+          <Link href="#pricing">
+            <Button className="h-10 rounded-full px-4 text-sm font-medium">
+              Get started
+            </Button>
+          </Link>
         </div>
 
         {/* Custom Modern Animated Hamburger Button (2 lines: 1 big, 1 small -> equal cross) */}
@@ -122,25 +124,25 @@ export default function Navbar() {
             >
               <div className="flex flex-col space-y-3.5 text-base font-medium">
                 <Link
-                  href="#"
+                  href="#features"
                   className="py-1 text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  How it works
+                  Features
                 </Link>
                 <Link
-                  href="#"
-                  className="py-1 text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  All tools
-                </Link>
-                <Link
-                  href="#"
+                  href="#pricing"
                   className="py-1 text-foreground/80 hover:text-foreground transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Pricing
+                </Link>
+                <Link
+                  href="#faq"
+                  className="py-1 text-foreground/80 hover:text-foreground transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  FAQ
                 </Link>
               </div>
 
@@ -153,12 +155,13 @@ export default function Navbar() {
                 >
                   Log in
                 </Button>
-                <Button
-                  className="h-11 rounded-full text-sm font-medium w-full"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get started
-                </Button>
+                <Link href="#pricing" onClick={() => setMobileMenuOpen(false)} className="w-full">
+                  <Button
+                    className="h-11 rounded-full text-sm font-medium w-full"
+                  >
+                    Get started
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </>

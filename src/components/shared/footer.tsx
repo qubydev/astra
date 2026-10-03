@@ -89,12 +89,12 @@ export default function Footer() {
             </span>
             <ul className='space-y-2.5 text-xs sm:text-sm text-muted-foreground'>
               <li>
-                <Link href='#' className='hover:text-foreground transition-colors'>
+                <Link href='#features' className='hover:text-foreground transition-colors'>
                   All Voices
                 </Link>
               </li>
               <li>
-                <Link href='#' className='hover:text-foreground transition-colors'>
+                <Link href='#pricing' className='hover:text-foreground transition-colors'>
                   Pricing Plans
                 </Link>
               </li>

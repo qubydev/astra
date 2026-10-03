@@ -18,7 +18,7 @@ export default function CTA() {
   return (
     <section className='w-full max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24'>
       {/* Dark Architectural Banner */}
-      <div className='relative rounded-3xl bg-[#0a0a0c] border border-white/10 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xl min-h-[380px] sm:min-h-[420px] flex flex-col justify-center'>
+      <div className='relative rounded-3xl bg-[#0a0a0c] border border-white/10 p-8 sm:p-12 lg:p-16 overflow-hidden min-h-[380px] sm:min-h-[420px] flex flex-col justify-center'>
         {/* 3D Architectural Acoustic Slats (Lit in White instead of Green) */}
         <div className='absolute inset-y-0 right-0 w-full sm:w-3/5 lg:w-1/2 flex pointer-events-none select-none overflow-hidden [mask-image:linear-gradient(to_left,black_50%,transparent_100%)]'>
           {Array.from({ length: 9 }).map((_, i) => {
@@ -46,7 +46,7 @@ export default function CTA() {
           {/* Main Statement */}
           <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-400 leading-[1.18]'>
             Most creators don&apos;t treat{' '}
-            <span className='text-white font-extrabold drop-shadow-[0_0_20px_rgba(255,255,255,0.35)]'>
+            <span className='text-white font-extrabold'>
               voice
             </span>{' '}
             like a feature, but we do
@@ -76,7 +76,7 @@ export default function CTA() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   onSubmit={handleSubmit}
-                  className='relative flex items-center rounded-full bg-white/[0.06] border border-white/15 p-1.5 pl-5 sm:pl-6 shadow-xl focus-within:border-white/40 focus-within:ring-2 focus-within:ring-white/10 transition-all backdrop-blur-md'
+                  className='relative flex items-center rounded-full bg-white/[0.06] border border-white/15 p-1.5 pl-5 sm:pl-6 focus-within:border-white/40 focus-within:ring-2 focus-within:ring-white/10 transition-all backdrop-blur-md'
                 >
                   <input
                     type='email'
@@ -88,7 +88,7 @@ export default function CTA() {
                   />
                   <button
                     type='submit'
-                    className='shrink-0 inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white text-black hover:bg-neutral-100 font-semibold text-xs sm:text-sm transition-colors cursor-pointer shadow-xs'
+                    className='shrink-0 inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white text-black hover:bg-neutral-100 font-semibold text-xs sm:text-sm transition-colors cursor-pointer'
                   >
                     <span>Subscribe</span>
                   </button>

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import {
   AnimatePresence,
   animate,
@@ -601,9 +602,11 @@ export default function Hero() {
       </p>
 
       <div className='mt-6 sm:mt-7'>
-        <Button className='h-12 rounded-full px-5 text-sm sm:text-base font-medium shadow-xs transition-all'>
-          Get started
-        </Button>
+        <Link href='#pricing'>
+          <Button className='h-12 rounded-full px-5 text-sm sm:text-base font-medium shadow-xs transition-all'>
+            Get started
+          </Button>
+        </Link>
       </div>
 
       {/* Demo Section */}

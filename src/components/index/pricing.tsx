@@ -63,7 +63,7 @@ export default function Pricing() {
   const isYearly = billingCycle === 'yearly'
 
   return (
-    <section className='w-full max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24'>
+    <section id='pricing' className='w-full max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24'>
       {/* Header */}
       <div className='text-center max-w-xl mx-auto'>
         <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground'>

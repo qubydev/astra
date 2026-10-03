@@ -36,7 +36,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(0)
 
   return (
-    <section className='w-full max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24'>
+    <section id='faq' className='w-full max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24'>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start'>
         {/* Left Column: Heading + Help Card */}
         <div className='lg:col-span-5 flex flex-col justify-between lg:sticky lg:top-24'>
